@@ -1,12 +1,11 @@
 #!/usr/bin/env coffee
 
 import console from './console'
+import Bls from 'bls-wasm'
+import * as CONFIG from '@rmw/config'
 
-export default (a,b)=>
-  a + b
-
-export domain-sign = (a,b)=>
-  c = []
-  for i, pos in a
-    c.push i+b[pos]
-  c
+export default (host)=>
+  await Bls.init(Bls.BLS12_381)
+  return
+  # CONFIG.get 'test'
+  # process.exit()

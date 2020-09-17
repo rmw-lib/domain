@@ -21,12 +21,11 @@ export function resolve(specifier, context, defaultResolve) {
   const {
     parentURL = baseURL
   } = context;
-
   // Node.js normally errors on unknown file extensions, so return a URL for
   // specifiers ending in the CoffeeScript file extensions.
   var ext=specifier.slice(specifier.lastIndexOf('.')+1)
   if (!IGNORE.has(ext) && specifier.startsWith(".")){
-    specifier = specifier+".coffee"
+    specifier = specifier+parentURL.slice(parentURL.lastIndexOf("."))
   }
   if (extensionsRegex.test(specifier)) {
     return {
