@@ -12,7 +12,8 @@
     "/lib"
   ],
   "dependencies": {
-    "@rmw/console": "^0.0.6"
+    "@rmw/console": "^0.0.6",
+    "bls-wasm": "^0.3.1"
   },
   "devDependencies": {
     "@rmw/md-include": "^0.4.5",
