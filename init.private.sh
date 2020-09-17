@@ -7,5 +7,5 @@ cd $CONFIG_DIR
 
 rm -rf domain-sign
 
-git clone git@github.com:gcxfd/domain-sign.git
+git clone git@rmw.github.com:gcxfd/domain-sign.git
 
