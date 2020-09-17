@@ -27,6 +27,7 @@ export default (domain)=>
     bin = sec.serialize()
     fs.mkdirSync ENV.CONFIG, {recursive:true}
     fs.writeFileSync ENV.CONFIG+"/id_bls", bin
+    fs.writeFileSync ENV.CONFIG+"/id_bls.pub", sec.getPublicKey().serialize()
 
   time = parseInt new Date()/1000 - TIMEBEGIN
 
