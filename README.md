@@ -22,7 +22,7 @@ import domainSign from '@rmw/domain-sign'
 import test from 'tape-catch'
 
 test 'domain-sign', (t)=>
-  console.log domainSign "baidu.com"
+  console.log await domainSign "www.baidu.com"
   t.end()
 
 ```
